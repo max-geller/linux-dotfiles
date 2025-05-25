@@ -1,7 +1,5 @@
 # Neovim Configuration
 
-This is my Neovim configuration. It's a work in progress as I'm still learning how to use Neovim.
-
 ## Key Features
 
 - 🚀 Lazy-loaded plugins using lazy.nvim
@@ -33,7 +31,7 @@ This configuration uses [Lazy.nvim](https://github.com/folke/lazy.nvim) as its p
 - [Alpha](https://github.com/goolord/alpha-nvim) - Dashboard
 - [which-key](https://github.com/folke/which-key.nvim) - Keybindings
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy Finder
-  
+
 ### Themes
 
 - [Catppuccin](https://github.com/catppuccin/nvim) - Catppuccin Theme
@@ -55,7 +53,7 @@ nvim/
 │   │   │       ├── lua.lua
 │   │   │       └── rust.lua
 │   │   ├── plugins/       # Plugin-Specific Configurations
-│   │   │   ├── init.lua        
+│   │   │   ├── init.lua
 │   │   │   └── neo-tree.lua
 │   │   ├── snippets/      # For Custom Snippets
 │   │   ├── themes/
@@ -67,16 +65,17 @@ nvim/
 │   │   └── lazy.lua
 ├── init.lua
 ├── lazy-lock.json
-└── README.md 
+└── README.md
 
 ```
 
 ## Key Mappings
 
-| Mapping | Description |
-|---------|-------------|
-| `<Space>` | Leader key |
-| `<Space>e` | Toggle file explorer |
-| `<Space>o` | Focus file explorer |
-| `<Space>ff` | Find File (Telescope) |
-| `<Space>fg` | Grep (Telescope) |
+| Mapping                       | Description           |
+| ----------------------------- | --------------------- |
+| `<Space>`                     | Leader key            |
+| `<Space>e`                    | Toggle file explorer  |
+| `<Space>o`                    | Focus file explorer   |
+| `<Space>ff`                   | Find File (Telescope) |
+| `<Space>fg`                   | Grep (Telescope)      |
+| `CTRL + [Up/Down/Left/Right]` | Focus Between Panes   |

@@ -4,3 +4,6 @@
 
 `<Space>`
 
+## Tab Navigation
+
+CNTL + Arrow Keys

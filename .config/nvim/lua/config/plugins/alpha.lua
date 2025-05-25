@@ -37,6 +37,7 @@ return {
         dashboard.button("SPC fg", "  > Grep (Telescope)"),
         dashboard.button("q", "  > Quit NeoVIM", "<cmd>qa<CR>"),
         dashboard.button(":Tutor", "  > Start Tutor"),
+        dashboard.button("SPC wr", "  Restore Session", "<cmd>SessionRestore<CR>")
       }
 
     -- Set footer with dynamic content including MAXVIM version

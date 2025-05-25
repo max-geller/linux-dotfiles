@@ -9,5 +9,3 @@ require("config.core").setup()
 
 -- Initialize LSP
 -- require("config.lsp").setup()
-
-
