@@ -1,0 +1,98 @@
+* {
+    border: none;
+    border-radius: 0;
+    padding: 0; 
+    margin-top: 0;
+
+    font-family: "Symbols Nerd Font", "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0.95);  /* Made more visible */
+    color: #cdd6f4;
+    border-radius: 0px;  /* Added rounded corners */
+    margin: 5px;  /* Added margin */
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #a6adc8;
+    background: transparent;
+    border-radius: 4px;
+}
+
+#workspaces button.active {
+    color: #cba6f7;
+    background: rgba(203, 166, 247, 0.2);
+}
+
+#workspaces button:hover {
+    background: rgba(203, 166, 247, 0.1);
+}
+
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#tray,
+#custom-power {
+    padding: 0 10px;
+    margin: 0 4px;
+    color: #cdd6f4;
+    border-radius: 4px;
+    background: rgba(21, 18, 27, 0.6);
+}
+
+/* Make modules light up on hover */
+#clock:hover,
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#custom-power:hover {
+    background: rgba(21, 18, 27, 0.8);
+}
+
+#custom-power {
+    color: #f38ba8;  /* Make the power button red-ish */
+    padding: 0 15px;
+}
+
+#custom-launcher,
+#custom-files,
+#custom-terminal,
+#custom-code {
+    padding: 0 15px;
+    margin: 0 4px;
+    color: #cdd6f4;
+    border-radius: 4px;
+    background: rgba(21, 18, 27, 0.6);
+    font-family: "Font Awesome 6 Free", "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+/* Add hover effects for the new buttons */
+#custom-launcher:hover,
+#custom-files:hover,
+#custom-terminal:hover,
+#custom-code:hover {
+    background: rgba(21, 18, 27, 0.8);
+}
+
+/* Give each button a unique color */
+#custom-launcher {
+    color: #f5c2e7;  /* Pink */
+}
+
+#custom-files {
+    color: #94e2d5;  /* Teal */
+}
+
+#custom-terminal {
+    color: #89b4fa;  /* Blue */
+}
+
+#custom-code {
+    color: #a6e3a1;  /* Green */
+}

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Kill existing processes
+killall waybar
+killall hyprpaper
+
+# Restart processes
+waybar &
+hyprpaper &
+
+# Reload Hyprland config
+hyprctl reload 

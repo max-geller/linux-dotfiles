@@ -1,0 +1,106 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 4,
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "modules-left": [
+    "custom/launcher",
+    "custom/files",
+    "custom/terminal",
+    "custom/code"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "clock",
+    "pulseaudio",
+    "network",
+    "battery",
+    "custom/snapshot",
+    "custom/power",
+    "tray"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{name}"
+  },
+  "clock": {
+    "format": "{:%a %d %b %I:%M %p}",
+    "tooltip-format": false
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "  {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-ethernet": "󰈀 {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-disconnected": "󰤭",
+    "interval": 1,
+    "tooltip-format": "Connected to {essid}\nIP: {ipaddr}",
+    "format-linked": "󰈁 {ifname} (No IP)"
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "max-volume": 100
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.local/bin/power-menu",
+    "tooltip": false
+  },
+  "custom/launcher": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wofi --show drun"
+  },
+  "custom/files": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "nautilus"
+  },
+  "custom/terminal": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "kitty"
+  },
+  "custom/code": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "code"
+  },
+  "custom/snapshot": {
+    "format": "🗂️",
+    "tooltip": "Create Btrfs snapshot",
+    "on-click": "~/.local/bin/create-snapshot.sh"
+  }
+}

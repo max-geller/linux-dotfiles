@@ -1,0 +1,37 @@
+@import "base"
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: " ";
+}
+
+window {
+    width: 450px;
+}
+
+listview {
+    columns: 1;
+    lines: 7;
+    fixed-height: true;
+    fixed-columns: true;
+}
+
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: @g-spacing;
+}
+
+prompt {
+    text-color: @fg-color;
+}
+
+entry {
+    placeholder: "Search Apps";
+    text-color: @fg-color;
+    placeholder-color: @fgp-color;
+}
+
+mainbox {
+    children: ["inputbar", "listview", "message"];
+} 

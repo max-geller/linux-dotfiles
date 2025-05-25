@@ -1,0 +1,10 @@
+#!/bin/bash
+WALLPAPER_DIR="$HOME/Pictures/wallpapers"
+SELECTED=$(ls $WALLPAPER_DIR | wofi --dmenu)
+
+if [ -n "$SELECTED" ]; then
+    echo "preload = $WALLPAPER_DIR/$SELECTED" > ~/.config/hypr/hyprpaper.conf
+    echo "wallpaper = ,$WALLPAPER_DIR/$SELECTED" >> ~/.config/hypr/hyprpaper.conf
+    echo "splash = false" >> ~/.config/hypr/hyprpaper.conf
+    hyprpaper
+fi 

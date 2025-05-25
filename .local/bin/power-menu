@@ -1,0 +1,36 @@
+#!/bin/bash
+
+entries="Logout\nSuspend\nLock\nRestart\nShutdown"
+
+selected=$(printf "$entries" | rofi -dmenu \
+    -theme ~/.config/rofi/themes/power-menu.rasi \
+    -selected-row 0 \
+    -normal-window \
+    -location 1 \
+    -xoffset 0 \
+    -yoffset 30 \
+    -p "Power Menu" \
+    | tr '[:upper:]' '[:lower:]')
+
+case $selected in
+    # Return to GDM Login Manager
+    "logout")
+        hyprctl dispatch exit
+        ;;
+    # Suspend Computer (Hypridle)
+    "suspend")
+        systemctl suspend
+        ;;
+    # Lock Screen (Hyprlock)
+    "lock")
+        hyprlock
+        ;;
+    # Restart Computer
+    "restart")
+        systemctl reboot
+        ;;
+    # Shutdown Computer
+    "shutdown")
+        systemctl poweroff
+        ;;
+esac

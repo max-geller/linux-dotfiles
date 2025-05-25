@@ -1,0 +1,51 @@
+* {
+    background-color: #000000;
+    text-color: #FFFFFF;
+    font: "Figtree 13";
+}
+
+window {
+    width: 200px;
+    padding: 8px;
+    location: northeast;     /* Position relative to mouse */
+    anchor: northwest;       /* Anchor point of the window */
+}
+
+mainbox {
+    children: ["listview"];
+    spacing: 0;
+}
+
+listview {
+    lines: 5;             /* Changed to match number of menu items */
+    fixed-height: true;
+    border: 0;
+    spacing: 14px;         /* Space between menu items */
+    padding: 4px;       /* Top/bottom padding inside listview */
+}
+
+element {
+    padding: 2px;    /* Increased padding for better touch targets */
+    spacing: 0px;    /* Spacing between icon and text */
+    border-radius: 2px;
+    cursor: pointer;
+    orientation: horizontal;
+    children: [ element-text ];
+}
+
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: center;
+    expand: true;
+    padding: 8px 12px;    /* Add vertical padding */
+    line-height: 24px; /* Control the height of the text area -*/
+}
+
+element selected {
+    background-color: #FFFFFF;
+    text-color: #000000;
+}
+
+inputbar {
+    enabled: false;
+} 

@@ -1,0 +1,6 @@
+# Keybindings
+
+## Leader Key
+
+`<Space>`
+
